@@ -1,10 +1,10 @@
 {
-  "name": "login.dfe.migration.admin",
+  "name": "login.dfe.monitor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "settings='./config/PROJECT-NAME.dev.json' node src/index.js",
+    "dev": "settings='./config/login.dfe.monitor.dev.json' node src/index.js",
     "test": "./node_modules/.bin/jest"
   },
   "engines": {
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DFE-Digital/login.dfe.node-boilerplate.git"
+    "url": "git+https://github.com/DFE-Digital/login.dfe.monitor.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DFE-Digital/login.dfe.node-boilerplate/issues"
+    "url": "https://github.com/DFE-Digital/login.dfe.monitor/issues"
   },
-  "homepage": "https://github.com/DFE-Digital/login.dfe.node-boilerplate#readme",
+  "homepage": "https://github.com/DFE-Digital/login.dfe.monitor#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",

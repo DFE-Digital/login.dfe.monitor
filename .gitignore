@@ -62,8 +62,8 @@ typings/
 .env.production.local
 
 # Dev env
-/config/
-!/config/login.dfe.monitor.dev.json
+/server/config/
+!/server/config/login.dfe.monitor.dev.json
 
 .idea/workspace.xml
 .idea/watcherTasks.xml

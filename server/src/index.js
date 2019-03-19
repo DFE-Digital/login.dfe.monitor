@@ -21,7 +21,10 @@ if (config.hostingEnvironment.env !== 'dev') {
 }
 
 app.use(bodyParser.json());
-
+app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*'); //TODO: Be more secure
+  next();
+});
 
 registerRoutes(app);
 

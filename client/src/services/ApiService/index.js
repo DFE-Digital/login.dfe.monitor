@@ -1,10 +1,13 @@
 import JobsClient from './JobsClient';
+import axios from 'axios';
 
 class ApiService {
   constructor(apiBaseUri) {
-    this.baseUri = apiBaseUri;
+    this.client = axios.create({
+      baseURL: apiBaseUri,
+    });
 
-    this.jobs = new JobsClient();
+    this.jobs = new JobsClient(this.client);
   }
 }
 

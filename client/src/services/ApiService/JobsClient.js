@@ -1,32 +1,13 @@
 class JobsClient {
-  async getCategoriesAndTypes() {
-    return Promise.resolve([
-      {
-        id: 'category1',
-        name: 'Category One',
-        types: [
-          {
-            id: 'c1ja',
-            name: 'Job 1A',
-          },
-        ]
-      },
-      {
-        id: 'category2',
-        name: 'Category Two',
-        types: [
-          {
-            id: 'c2ja',
-            name: 'Job 2A',
-          },
-          {
-            id: 'c2jb',
-            name: 'Job 2B',
-          },
-        ]
-      },
-    ]);
+  constructor(client) {
+    this.client = client;
   }
+
+  async getCategoriesAndTypes() {
+    const response = await this.client.get('jobs/categories');
+    return response.data;
+  }
+
   async getStats() {
     const getRandomLength = () => Math.round(Math.random() * 5000);
     return Promise.resolve({

@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const logger = require('./infrastructure/logger');
 const https = require('https');
 const config = require('./infrastructure/config');
@@ -21,8 +22,10 @@ if (config.hostingEnvironment.env !== 'dev') {
 }
 
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use((req, res, next) => {
-  res.set('Access-Control-Allow-Origin', '*'); //TODO: Be more secure
+  res.set('Access-Control-Allow-Origin', config.hostingEnvironment.clientUrl);
+  res.set('Access-Control-Allow-Credentials', true);
   next();
 });
 

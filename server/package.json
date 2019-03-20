@@ -23,14 +23,17 @@
   "dependencies": {
     "agentkeepalive": "^3.4.1",
     "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "login.dfe.audit.winston-sequelize-transport": "git+https://github.com/DFE-Digital/login.dfe.audit.winston-sequelize-transport.git#v1.0",
     "login.dfe.express-error-handling": "git+https://github.com/DFE-Digital/login.dfe.express-error-handling.git#v1.2",
     "login.dfe.healthcheck": "git+https://github.com/DFE-Digital/login.dfe.healthcheck.git#v1.4.3",
     "login.dfe.jwt-strategies": "git+https://github.com/DFE-Digital/login.dfe.jwt-strategies.git#v2.0.1",
     "login.dfe.request-promise-retry": "git+https://github.com/DFE-Digital/login.dfe.request-promise-retry.git#v1.0",
+    "rsa-pem-from-mod-exp": "^0.8.4",
     "winston": "^2.4.4"
   },
   "devDependencies": {

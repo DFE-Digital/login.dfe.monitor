@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ApiService from './services/ApiService';
 import Nav from './components/Nav';
 import Account from './components/Account';
 import Jobs from './areas/Jobs';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.apiService = new ApiService(process.env.REACT_APP_API_BASE_URI);
   }
-  render() {
+
+  routes() {
     return (
       <React.Fragment>
+        <Route path="/" render={()=><Jobs apiService={this.apiService}/>} />
+      </React.Fragment>
+    )
+  }
+
+  render() {
+    return (
+      <Router>
         <div className="header-container">
           <header>
             <h1>DSI Monitor</h1>
@@ -20,9 +30,9 @@ class App extends Component {
           <Nav/>
         </div>
         <main>
-          <Jobs apiService={this.apiService}/>
+          {this.routes()}
         </main>
-      </React.Fragment>
+      </Router>
     );
   }
 }

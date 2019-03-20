@@ -98,7 +98,7 @@ class Jobs extends Component {
       });
 
       this.pollStats();
-      this.pollTimerId = setInterval(() => this.pollStats(), 5000);
+      this.pollTimerId = setInterval(() => this.pollStats(), 30000);
     });
   }
 

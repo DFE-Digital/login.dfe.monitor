@@ -5,9 +5,9 @@ const logger = require('./infrastructure/logger');
 const https = require('https');
 const config = require('./infrastructure/config');
 const helmet = require('helmet');
-
 const registerRoutes = require('./routes');
 const { getErrorHandler } = require('login.dfe.express-error-handling');
+const data = require('./data');
 
 const app = express();
 app.use(helmet({
@@ -35,6 +35,8 @@ registerRoutes(app);
 app.use(getErrorHandler({
   logger,
 }));
+
+data.start();
 
 if (config.hostingEnvironment.env === 'dev') {
   app.proxy = true;

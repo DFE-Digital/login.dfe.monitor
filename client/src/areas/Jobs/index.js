@@ -100,7 +100,13 @@ class Jobs extends Component {
 
       this.pollStats();
       this.pollTimerId = setInterval(() => this.pollStats(), 30000);
-    });
+    }).catch((e) => {
+      if (e.apiAuthenticationRequired) {
+        this.props.authenticate();
+        return;
+      }
+      throw e;
+    })
   }
 
   componentWillUnmount() {

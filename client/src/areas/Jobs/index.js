@@ -44,6 +44,12 @@ class Jobs extends Component {
         totals: stats.totals,
         categories: cleanCategories,
       });
+    }).catch((e)=>{
+      if (e.apiAuthenticationRequired) {
+        this.props.authenticate();
+        return;
+      }
+      throw e;
     })
   }
 
@@ -99,7 +105,7 @@ class Jobs extends Component {
       });
 
       this.pollStats();
-      this.pollTimerId = setInterval(() => this.pollStats(), 30000);
+      this.pollTimerId = setInterval(() => this.pollStats(), 5000);
     }).catch((e) => {
       if (e.apiAuthenticationRequired) {
         this.props.authenticate();

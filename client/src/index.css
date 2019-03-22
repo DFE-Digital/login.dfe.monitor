@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+.header-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #323130;
+  color: #f1f2f6;
+  width: 250px;
+}
+.header-container a {
+  color: white;
+}
+.header-container header {
+  background-color: dodgerblue;
+}
+.header-container header h1 {
+  display: block;
+  margin: 0;
+  padding: 15px;
+}
+.header-container .logged-in-profile {
+  background-color: #474747;
+  padding: 15px;
+}
+.header-container nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-container nav ul li {
+  border-bottom: solid 1px #474747;
+  border-left: 10px solid #323130;
+  padding: 15px;
+}
+.header-container nav ul li.selected {
+  border-left: 10px solid dodgerblue;
+}
+.header-container nav ul a {
+  text-decoration: none;
+}
+.header-container nav ul i {
+  margin-right: 5px;
+}
+
+main {
+  margin: 0;
+  padding: 0 0 0 250px;
+}
+main header {
+  border-bottom: solid 1px #474747;
+  padding-left: 15px;
+}
+
+main header h1 {
+  display: block;
+  margin: 0;
+  padding: 15px;
+}
+main header i {
+  margin-right: 10px;
+}
+
+.area-details {
+  padding: 15px;
+}
+
+.job-headlines {
+
+}
+.job-headlines .headline-status {
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+}
+.job-headlines .headline-status span {
+  display: block;
+}
+.job-headlines .headline-status span.status {
+  font-weight: lighter;
+  font-size: 1.5em;
+}
+.job-headlines .headline-status span.count {
+  font-size: 2em;
+}
+.job-types {
+  width: 100%;
+
+}
+.job-types .job-category {
+  margin-top: 50px;
+}
+.job-types .job-category:first-of-type {
+  margin-top: 0;
+}
+.job-types .job-category h4 {
+  display: block;
+}
+.job-types .job-category .job-type {
+  border: solid 1px black;
+  display: inline-block;
+  width: 350px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.job-types .job-category .job-type .title {
+  background-color: #474747;
+  color: #f1f2f6;
+  padding: 10px;
+}
+.job-types .job-category .job-type .content {
+  clear: both;
+}
+.job-types .job-category .job-type .content .chart {
+  float: left;
+  padding: 10px;
+  height:110px;
+  width: 110px;
+}
+.job-types .job-category .job-type .content .details {
+  float: left;
+  padding: 10px;
+}
+.job-types .job-category .job-type .content .details tr {
+  margin-bottom: 5px;
+}
+.job-types .job-category .job-type .content .details th {
+  text-align: left;
+  padding-right: 10px;
+}
+.job-types .job-category .job-type .content .details tr.inactive th {
+  border-left: solid 5px yellowgreen;
+  padding-left: 5px;
+}
+.job-types .job-category .job-type .content .details tr.active th {
+  border-left: solid 5px violet;
+  padding-left: 5px;
+}
+.job-types .job-category .job-type .content .details tr.failed th {
+  border-left: solid 5px red;
+  padding-left: 5px;
+}
+.job-types .job-category .job-type .content .details tr.completed th {
+  border-left: solid 5px seagreen;
+  padding-left: 5px;
+}

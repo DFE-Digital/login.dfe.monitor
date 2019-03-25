@@ -12,12 +12,15 @@ class Account extends Component {
         };
       });
     const token = cookies.find(c => c.name === 'identity_details');
+    if (!token) {
+      return null;
+    }
     const id = JSON.parse(Buffer.from(token.value, 'base64').toString('utf8'));
-    
+
     return (
       <div className="logged-in-profile">
         <div className="account-name">{id.given_name} {id.family_name}</div>
-        <div><a href="#">Sign out</a></div>
+        <div><a href={this.props.apiBaseUri + '/auth/signout'}>Sign out</a></div>
       </div>
     );
   }

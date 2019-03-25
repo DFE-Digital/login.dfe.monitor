@@ -7,10 +7,11 @@ class Account extends Component {
       .map((x) => {
         const idx = x.indexOf('=');
         return {
-          name: x.substr(0, idx),
-          value: x.substr(idx + 1),
+          name: x.substr(0, idx).trim(),
+          value: x.substr(idx + 1).trim(),
         };
       });
+    console.info(cookies);
     const token = cookies.find(c => c.name === 'identity_details');
     if (!token) {
       return null;

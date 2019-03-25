@@ -38,7 +38,7 @@ class App extends Component {
         <div className="header-container">
           <header>
             <h1>DSI Monitor</h1>
-            <Account/>
+            <Account apiBaseUri={process.env.REACT_APP_API_BASE_URI}/>
           </header>
           <Nav/>
         </div>

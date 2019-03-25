@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 class JobType extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.chartRef = React.createRef();
   }
+
   render() {
     return (
       <div className="job-type">
@@ -15,6 +16,7 @@ class JobType extends Component {
           </div>
           <div className="details">
             <table>
+              <tbody>
               <tr className="inactive">
                 <th>Inactive</th>
                 <td>{this.props.type.inactive}</td>
@@ -31,12 +33,14 @@ class JobType extends Component {
                 <th>Completed</th>
                 <td>{this.props.type.completed}</td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>
       </div>
     );
   }
+
   componentDidMount() {
     this.chart = new window.Chart(this.chartRef.current, {
       type: 'doughnut',
@@ -62,6 +66,7 @@ class JobType extends Component {
       }
     });
   }
+
   componentDidUpdate(prevProps, prevState, snapshot) {
     this.chart.data.datasets[0].data = [this.props.type.inactive, this.props.type.active, this.props.type.failed, this.props.type.completed];
     this.chart.update();

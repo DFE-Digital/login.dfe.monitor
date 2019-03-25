@@ -11,7 +11,6 @@ class Account extends Component {
           value: x.substr(idx + 1).trim(),
         };
       });
-    console.info(cookies);
     const token = cookies.find(c => c.name === 'identity_details');
     if (!token) {
       return null;

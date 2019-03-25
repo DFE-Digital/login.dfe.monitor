@@ -4,6 +4,7 @@ import ApiService from './services/ApiService';
 import Nav from './components/Nav';
 import Account from './components/Account';
 import Jobs from './areas/Jobs';
+import JobDetails from './areas/JobDetails';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,8 @@ class App extends Component {
   routes() {
     return (
       <React.Fragment>
-        <Route path="/" render={() => <Jobs apiService={this.apiService} authenticate={this.authenticate.bind(this)}/>}/>
+        <Route path="/" exact render={() => <Jobs apiService={this.apiService} authenticate={this.authenticate.bind(this)}/>}/>
+        <Route path="/jobs/:type" render={({match}) => <JobDetails apiService={this.apiService} authenticate={this.authenticate.bind(this)} match={match}/>}/>
       </React.Fragment>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class JobType extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class JobType extends Component {
   render() {
     return (
       <div className="job-type">
-        <div className="title">{this.props.type.name}</div>
+        <div className="title"><Link to={`/jobs/${this.props.type.id}`}>{this.props.type.name}</Link></div>
         <div className="content">
           <div className="chart">
             <canvas ref={this.chartRef} width="100" height="100"></canvas>

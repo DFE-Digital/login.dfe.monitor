@@ -11,7 +11,7 @@ class Pagination extends Component {
       if (p === this.props.page) {
         return (<li><span className="current">{p}</span></li>);
       }
-      return (<li><a href="#" onClick={(e) => this.handleChangePage(e, p)}>{p}</a></li>);
+      return (<li><button className="button-link" onClick={(e) => this.handleChangePage(e, p)}>{p}</button></li>);
     });
   }
 

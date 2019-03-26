@@ -108,7 +108,7 @@ main header i {
   margin-bottom: 15px;
 }
 .job-types .job-category .job-type .title {
-  background-color: #474747;
+  background-color: #dee0e2;
   color: #f1f2f6;
   padding: 10px;
 }
@@ -185,14 +185,43 @@ main header i {
   width: 100%;
 }
 
+.jobList {
+  padding: 30px;
+}
+
 .jobList table {
   border-collapse: collapse;
   margin: 0 auto;
   width: 80%;
 }
 
+
 .jobList td, th {
   text-align: left;
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
+
+.jobList table thead {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.button-link {
+  border: none;
+  background: none;
+  color: #005ea5;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.button-link:hover {
+  color: #2b8cc4;
+}
+
+

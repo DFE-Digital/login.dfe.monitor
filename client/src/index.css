@@ -136,7 +136,7 @@ main header i {
   border-left: solid 5px yellowgreen;
   padding-left: 5px;
 }
-.job-types .job-category .job-type .content .details tr.active th {
+.job-types .job-category .job-type .content .details tr.actfive th {
   border-left: solid 5px violet;
   padding-left: 5px;
 }
@@ -149,19 +149,14 @@ main header i {
   padding-left: 5px;
 }
 
-.paginate {
-  padding: 10px;
-}
 
 .showingNumber {
   float: left;
   width: 50%;
-  padding: 10px;
 }
 .pagination {
   float: right;
-  margin-top: .26316em;
-  margin-bottom: 1.05263em;
+  width: 50%;
 }
 
 .pagination ul {
@@ -182,4 +177,22 @@ main header i {
 
 .pagination li span.current {
   font-weight: bold;
+}
+
+
+.jobs {
+  float: left;
+  width: 100%;
+}
+
+.jobList table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.jobList td, th {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }

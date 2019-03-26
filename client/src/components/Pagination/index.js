@@ -1,17 +1,22 @@
 import React, {Component} from 'react';
 
 class Pagination extends Component {
+  handleChangePage(e, p) {
+    e.preventDefault();
+    this.props.setPageNumber(p)
+  }
+
   paginationBracket(pages) {
     return pages.map((p) => {
       if (p === this.props.page) {
         return (<li><span className="current">{p}</span></li>);
       }
-      return (<li><a href="">{p}</a></li>);
+      return (<li><a href="#" onClick={(e) => this.handleChangePage(e, p)}>{p}</a></li>);
     });
   }
 
   paginationSeperator(previousBracket) {
-    if (previousBracket.length > 0){
+    if (previousBracket.length > 0) {
       return (<li><span>...</span></li>);
     }
     return null;

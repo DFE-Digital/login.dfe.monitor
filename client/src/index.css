@@ -152,11 +152,11 @@ main header i {
 
 .showingNumber {
   float: left;
-  width: 50%;
+  padding-left: 50px;
 }
 .pagination {
   float: right;
-  width: 50%;
+  padding-right: 50px;
 }
 
 .pagination ul {
@@ -186,13 +186,13 @@ main header i {
 }
 
 .jobList {
-  padding: 30px;
+  padding: 25px 50px;
 }
 
 .jobList table {
   border-collapse: collapse;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 

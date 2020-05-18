@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const logger = require('./infrastructure/logger');
 const https = require('https');
+const http = require('http');
 const config = require('./infrastructure/config');
 const helmet = require('helmet');
 const registerRoutes = require('./routes');
@@ -10,6 +11,8 @@ const { getErrorHandler } = require('login.dfe.express-error-handling');
 const data = require('./data');
 
 const app = express();
+
+https.globalAgent.maxSockets = http.globalAgent.maxSockets = config.hostingEnvironment.agentKeepAlive.maxSockets || 50;
 app.use(helmet({
   noCache: true,
   frameguard: {

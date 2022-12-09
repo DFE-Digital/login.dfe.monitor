@@ -24,7 +24,7 @@
     "agentkeepalive": "^3.4.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "helmet": "^3.16.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
